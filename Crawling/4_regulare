@@ -1,0 +1,21 @@
+from bs4 import BeautifulSoup
+import re
+
+
+html = """
+<ul>
+	<ul><a href="hoge.html">hoge</li>
+	<ul><a href="https://example.com/fuga">fuga*</li>
+	<ul><a href="https://example.com/foo">foo*</li>
+	<ul><a href="http://example.com/aaa">ada</li>
+</ul>
+"""
+
+
+soup = BeautifulSoup(html, "html.parser")
+href_reg = re.compile(r"^https://")
+li = soup.find_all(href=href_reg)
+
+for e in li:
+  print(e.attrs['href'])
+  print(e.string)	
