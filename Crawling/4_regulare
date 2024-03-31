@@ -4,10 +4,10 @@ import re
 
 html = """
 <ul>
-	<ul><a href="hoge.html">hoge</li>
-	<ul><a href="https://example.com/fuga">fuga*</li>
-	<ul><a href="https://example.com/foo">foo*</li>
-	<ul><a href="http://example.com/aaa">ada</li>
+	<li><a href="hoge.html">hoge</li>
+	<li><a href="https://example.com/fuga">fuga*</li>
+	<li><a href="https://example.com/foo">foo*</li>
+	<li><a href="http://example.com/aaa">ada</li>
 </ul>
 """
 
